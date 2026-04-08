@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Cupón</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Registrar Nuevo Cupón</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="row g-3" action="index.html">
+                            <div class="col-md-12">
+                                <label class="form-label fw-bold">Descripción del Cupón *</label>
+                                <textarea class="form-control" rows="2" placeholder="Ej: 20% de descuento en analgésicos" required></textarea>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold">Tipo de Descuento</label>
+                                <select class="form-select">
+                                    <option>Porcentaje (%)</option>
+                                    <option>Monto Fijo (₡)</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold">Valor Descuento *</label>
+                                <input type="number" class="form-control" placeholder="0.00" required>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold">Fecha de Expiración *</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold text-primary">Fecha de Creación</label>
+                                <input type="text" class="form-control bg-light" value="2026-04-07" readonly>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold text-primary">ID Usuario (Creador)</label>
+                                <input type="text" class="form-control bg-light" value="USR-4421" readonly>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label fw-bold">Estado Inicial</label>
+                                <div class="form-check form-switch mt-2">
+                                    <input class="form-check-input" type="checkbox" checked id="estado">
+                                    <label class="form-check-label" for="estado">Activo al guardar</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 border-top pt-3 mt-4 text-end">
+                                <a href="index.html" class="btn btn-secondary me-2">Cancelar</a>
+                                <button type="submit" class="btn btn-primary px-4">Guardar Cupón</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
