@@ -9,13 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="bg-light d-flex flex-column min-vh-100">
 
-    <div id="layout"></div>
+    <div id="navbar-placeholder"></div>
 
-    <div id="vista" style="display:none;">
-
+    <main class="py-5">
         <div class="container">
+
             <h2 class="mb-3">Detalle de la Categoría</h2>
 
             <div class="card shadow" style="max-width: 800px;">
@@ -44,27 +44,15 @@
                     </div>
                 </div>
             </div>
+
         </div>
+    </main>
 
+    <div id="footer-placeholder"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../components/loader.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-        <script>
-
-            fetch("../shared/layout.html")
-                .then(res => res.text())
-                .then(data => {
-
-                    document.getElementById("layout").innerHTML = data;
-
-                    const contenido = document.getElementById("vista").innerHTML;
-
-                    document.getElementById("contenido").innerHTML = contenido;
-
-                });
-
-        </script>
 </body>
 
 </html>
