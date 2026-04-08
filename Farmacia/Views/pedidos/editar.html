@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Pedido - Farmacia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-3">✏️ Editar Pedido</h2>
+
+        <form class="row g-3" action="index.html">
+
+            <div class="col-md-12">
+                <label class="form-label">Pedido ID</label>
+                <p class="form-control-plaintext fw-bold">#1001</p>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Cliente *</label>
+                <select class="form-select">
+                    <option value="CLI-001" selected>Juan Pérez</option>
+                    <option value="CLI-002">María López</option>
+                    <option value="CLI-003">Carlos Ruiz</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Cupón</label>
+                <select class="form-select">
+                    <option value="">Sin cupón</option>
+                    <option value="CUP-005">VERANO5 - 5% descuento</option>
+                    <option value="CUP-010" selected>DESCUENTO10 - 10% descuento</option>
+                    <option value="CUP-015">PROMO15 - 15% descuento</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Estado *</label>
+                <select class="form-select">
+                    <option selected>Pendiente</option>
+                    <option>Completado</option>
+                    <option>Cancelado</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Total (₡) *</label>
+                <div class="input-group">
+                    <span class="input-group-text">₡</span>
+                    <input type="number" class="form-control" value="15000" />
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <label class="form-label">Fecha Actualización</label>
+                <input type="date" class="form-control" value="2025-06-02" />
+            </div>
+
+            <div class="col-md-12">
+                <label class="form-label">Descripción</label>
+                <textarea class="form-control" rows="3">Pedido de antibióticos</textarea>
+            </div>
+
+            <div class="col-12 mt-3">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-save"></i> Guardar cambios
+                </button>
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Cancelar
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4">
+        <div class="container py-2">
+            &copy; 2025 - Farmacia
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Puntos - Farmacia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="mb-3">⭐ Mis Puntos Acumulados</h2>
+
+        <!-- Botones de acción -->
+        <div class="mb-3 d-flex gap-2">
+            <a href="canjear-puntos.html" class="btn btn-success">
+                <i class="bi bi-gift"></i> Canjear Puntos
+            </a>
+            <a href="../index.html" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Volver al inicio
+            </a>
+        </div>
+
+        <!-- Tabla de puntos -->
+        <div class="mb-3">
+            <input type="text" id="buscador" class="form-control" placeholder="Buscar en mi historial de puntos...">
+        </div>
+
+        <table class="table table-striped" id="tablaPuntos">
+            <thead>
+                <tr>
+                    <th>ID Transacción</th>
+                    <th>Descripción</th>
+                    <th>Puntos Obtenidos</th>
+                    <th>Puntos Canjeados</th>
+                    <th>Saldo</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#PT-1001</td>
+                    <td>Compra Amoxicilina 500mg</td>
+                    <td>50</td>
+                    <td>0</td>
+                    <td>50</td>
+                    <td>2025-06-01</td>
+                </tr>
+                <tr>
+                    <td>#PT-1002</td>
+                    <td>Compra Ibuprofeno 400mg</td>
+                    <td>20</td>
+                    <td>0</td>
+                    <td>70</td>
+                    <td>2025-06-03</td>
+                </tr>
+                <tr>
+                    <td>#PT-1003</td>
+                    <td>Canje cupón descuento</td>
+                    <td>0</td>
+                    <td>30</td>
+                    <td>40</td>
+                    <td>2025-06-05</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4">
+        <div class="container py-2">
+            &copy; 2025 - Farmacia
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script de búsqueda -->
+    <script>
+        document.getElementById("buscador").addEventListener("keyup", function () {
+            let filtro = this.value.toLowerCase();
+            let filas = document.querySelectorAll("#tablaPuntos tbody tr");
+            filas.forEach(fila => {
+                let texto = fila.textContent.toLowerCase();
+                fila.style.display = texto.includes(filtro) ? "" : "none";
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eliminar Pedido - Farmacia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-3">🗑️ Eliminar Pedido</h2>
+
+        <div class="card shadow border-danger" style="max-width: 600px;">
+            <div class="card-body">
+                <h5 class="card-title text-danger">
+                    <i class="bi bi-exclamation-triangle"></i> ¿Está seguro de eliminar este pedido?
+                </h5>
+                <p class="text-muted">Esta acción no se puede deshacer.</p>
+
+                <hr />
+
+                <p>
+                    <strong>Pedido ID:</strong> #1001 <br />
+                    <strong>Cliente:</strong> Juan Pérez<br />
+                    <strong>Cupón:</strong> DESCUENTO10 <br />
+                    <strong>Estado:</strong> <span class="badge bg-warning">Pendiente</span> <br />
+                    <strong>Total:</strong> ₡15,000.00 <br />
+                    <strong>Descripción:</strong> Pedido de antibióticos <br />
+                    <strong>Fecha Creación:</strong> 2025-06-01 <br />
+                    <strong>Fecha Actualización:</strong> 2025-06-02
+                </p>
+
+                <div class="d-flex gap-2">
+                    <a href="index.html" class="btn btn-danger">
+                        <i class="bi bi-trash"></i> Confirmar eliminación
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Cancelar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4">
+        <div class="container py-2">
+            &copy; 2025 - Farmacia
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
