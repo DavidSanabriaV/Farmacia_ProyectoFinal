@@ -1,0 +1,265 @@
+/* ==============================
+VARIABLES DE COLOR
+============================== */
+
+:root{
+
+--color-primario:#1E5AA8;
+--color-secundario:#1C2E4A;
+--color-acento:#2D7FF9;
+--color-exito:#28A745;
+--color-error:#DC3545;
+--color-fondo:#F4F6F9;
+
+--texto:#333;
+}
+
+/* ==============================
+ESTILOS GENERALES
+============================== */
+
+body{
+background:var(--color-fondo);
+font-family:'Open Sans','Roboto',sans-serif;
+color:var(--texto);
+}
+
+/* ==============================
+TÍTULOS
+============================== */
+
+h1,h2,h3{
+font-family:'Poppins',sans-serif;
+font-weight:700;
+color:var(--color-secundario);
+}
+
+h4,h5,h6{
+font-family:'Poppins',sans-serif;
+font-weight:600;
+color:var(--color-secundario);
+}
+
+/* ==============================
+CONTAINERS
+============================== */
+
+.container{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ==============================
+BOTONES
+============================== */
+
+.btn{
+border-radius:8px;
+font-weight:500;
+transition:all .2s;
+}
+
+.btn-primary{
+background:var(--color-primario);
+border:none;
+}
+
+.btn-primary:hover{
+background:#154989;
+}
+
+.btn-success{
+background:var(--color-exito);
+border:none;
+}
+
+.btn-success:hover{
+background:#1f8a3a;
+}
+
+.btn-danger{
+background:var(--color-error);
+border:none;
+}
+
+.btn-danger:hover{
+background:#b52a37;
+}
+
+.btn-secondary{
+background:#6c757d;
+border:none;
+}
+
+.btn-warning{
+background:#ffc107;
+border:none;
+}
+
+/* ==============================
+TABLAS
+============================== */
+
+.table{
+border-radius:10px;
+overflow:hidden;
+background:white;
+}
+
+.table thead{
+background:var(--color-secundario);
+color:white;
+font-family:'Poppins',sans-serif;
+}
+
+.table-striped tbody tr:nth-of-type(odd){
+background:#f8f9fc;
+}
+
+.table tbody tr:hover{
+background:#eef3fb;
+transition:0.2s;
+}
+
+/* ==============================
+CARDS
+============================== */
+
+.card{
+border:none;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card-header{
+font-family:'Poppins';
+font-weight:600;
+}
+
+/* ==============================
+FORMULARIOS
+============================== */
+
+.form-label{
+font-weight:600;
+color:var(--color-secundario);
+}
+
+.form-control{
+border-radius:8px;
+border:1px solid #ced4da;
+padding:10px;
+}
+
+.form-control:focus{
+border-color:var(--color-acento);
+box-shadow:0 0 0 0.15rem rgba(45,127,249,0.25);
+}
+
+.form-select{
+border-radius:8px;
+}
+
+/* ==============================
+ALERTAS
+============================== */
+
+.alert{
+border:none;
+border-radius:10px;
+font-weight:500;
+}
+
+.alert-warning{
+background:#fff3cd;
+color:#856404;
+}
+
+.alert-danger{
+background:#f8d7da;
+color:#842029;
+}
+
+.alert-info{
+background:#e7f3ff;
+color:#084298;
+}
+
+/* ==============================
+BADGES
+============================== */
+
+.badge{
+font-weight:500;
+padding:6px 10px;
+border-radius:6px;
+}
+
+.bg-success{
+background:var(--color-exito)!important;
+}
+
+.bg-danger{
+background:var(--color-error)!important;
+}
+
+.bg-primary{
+background:var(--color-primario)!important;
+}
+
+/* ==============================
+CHATBOT
+============================== */
+
+#chatBody{
+background:#f9fbff;
+}
+
+#chatBody div{
+font-family:'Open Sans';
+}
+
+/* ==============================
+FOOTER
+============================== */
+
+footer{
+background:white;
+font-size:14px;
+}
+
+/* ==============================
+IMÁGENES BLOG
+============================== */
+
+img{
+border-radius:10px;
+}
+
+/* ==============================
+EFECTOS
+============================== */
+
+.card:hover{
+transform:translateY(-3px);
+transition:0.2s;
+}
+
+.btn:hover{
+transform:scale(1.03);
+}
+
+/* ==============================
+LINKS
+============================== */
+
+a{
+color:var(--color-acento);
+text-decoration:none;
+}
+
+a:hover{
+color:#1a5ed8;
+}
