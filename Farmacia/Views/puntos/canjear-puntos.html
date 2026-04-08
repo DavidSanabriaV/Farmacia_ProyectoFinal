@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canjear Puntos - Farmacia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-3">🎁 Canjear Puntos</h2>
+
+        <form class="row g-3" action="mis-puntos.html">
+            <div class="col-md-6">
+                <label class="form-label">Puntos disponibles</label>
+                <input type="text" class="form-control" value="950 pts" readonly>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Puntos a canjear *</label>
+                <input type="number" class="form-control" placeholder="Ingrese puntos" min="1" max="950">
+            </div>
+
+            <div class="col-12">
+                <label class="form-label">Seleccione premio</label>
+                <select class="form-select">
+                    <option value="">-- Seleccione un premio --</option>
+                    <option value="descuento5">Descuento 5% - 500 pts</option>
+                    <option value="descuento10">Descuento 10% - 1000 pts</option>
+                    <option value="regalo">Regalo sorpresa - 1200 pts</option>
+                </select>
+            </div>
+
+            <div class="col-12 mt-3">
+                <button type="submit" class="btn btn-success">
+                    <i class="bi bi-gift"></i> Canjear puntos
+                </button>
+                <a href="mis-puntos.html" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Cancelar
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4">
+        <div class="container py-2">&copy; 2025 - Farmacia</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

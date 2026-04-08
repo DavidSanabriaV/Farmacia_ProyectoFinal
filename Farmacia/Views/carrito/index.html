@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito - Farmacia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="mb-3">🛒 Mi Carrito</h2>
+
+        <table class="table table-striped" id="tablaCarrito">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Amoxicilina 500mg</td>
+                    <td class="precio">2500</td>
+                    <td>
+                        <input type="number" class="form-control form-control-sm cantidad" value="2" min="1">
+                    </td>
+                    <td class="subtotal">₡5,000.00</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm eliminar">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Ibuprofeno 400mg</td>
+                    <td class="precio">3750</td>
+                    <td>
+                        <input type="number" class="form-control form-control-sm cantidad" value="1" min="1">
+                    </td>
+                    <td class="subtotal">₡3,750.00</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm eliminar">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-end">
+            <h4 id="total">Total: ₡0.00</h4>
+        </div>
+
+        <div class="d-flex justify-content-end gap-2 mt-3">
+            <a href="../productos/index.html" class="btn btn-secondary">
+                Seguir comprando
+            </a>
+            <a href="checkout.html" class="btn btn-success">
+                Checkout
+            </a>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4">
+        <div class="container py-2">
+            &copy; 2025 - Farmacia
+        </div>
+    </footer>
+
+    <script>
+        function formatear(colones) {
+            return "₡" + colones.toLocaleString("es-CR", { minimumFractionDigits: 2 });
+        }
+
+        function actualizarTotales() {
+            let total = 0;
+
+            document.querySelectorAll("#tablaCarrito tbody tr").forEach(fila => {
+                let precio = parseFloat(fila.querySelector(".precio").textContent);
+                let cantidad = parseInt(fila.querySelector(".cantidad").value);
+
+                let subtotal = precio * cantidad;
+                fila.querySelector(".subtotal").textContent = formatear(subtotal);
+
+                total += subtotal;
+            });
+
+            document.getElementById("total").textContent = "Total: " + formatear(total);
+        }
+
+        // 🔥 ELIMINAR PRODUCTO
+        document.querySelectorAll(".eliminar").forEach(boton => {
+            boton.addEventListener("click", function () {
+                this.closest("tr").remove();
+                actualizarTotales();
+            });
+        });
+
+        // 🔄 ACTUALIZAR AL CAMBIAR CANTIDAD
+        document.querySelectorAll(".cantidad").forEach(input => {
+            input.addEventListener("input", actualizarTotales);
+        });
+
+        // 🚀 INICIAL
+        actualizarTotales();
+    </script>
+
+</body>
+</html>

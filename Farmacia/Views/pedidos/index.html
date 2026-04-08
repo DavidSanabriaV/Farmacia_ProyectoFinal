@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedidos - Farmacia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="mb-3">🛒 Gestión de Pedidos</h2>
+
+        <a href="crear.html" class="btn btn-success mb-3">
+            <i class="bi bi-plus-circle"></i> Registrar nuevo pedido
+        </a>
+
+        <div class="mb-3">
+            <input type="text" id="buscador" class="form-control" placeholder="Buscar pedido...">
+        </div>
+
+        <table class="table table-striped" id="tablaPedidos">
+            <thead>
+                <tr>
+                    <th>Pedido ID</th>
+                    <th>Cliente</th>
+                    <th>Cupón</th>
+                    <th>Estado</th>
+                    <th>Total</th>
+                    <th>Descripción</th>
+                    <th>Fecha Creación</th>
+                    <th>Fecha Actualización</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#1001</td>
+                    <td>Juan Pérez</td>
+                    <td>DESCUENTO10</td>
+                    <td><span class="badge bg-warning">Pendiente</span></td>
+                    <td>₡15,000.00</td>
+                    <td>Pedido de antibióticos</td>
+                    <td>2025-06-01</td>
+                    <td>2025-06-02</td>
+                    <td>
+                        <a href="detalle.html" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> Ver detalle
+                        </a>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Editar
+                        </a>
+                        <a href="eliminar.html" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#1002</td>
+                    <td>María López</td>
+                    <td>—</td>
+                    <td><span class="badge bg-success">Completado</span></td>
+                    <td>₡8,500.00</td>
+                    <td>Vitaminas y suplementos</td>
+                    <td>2025-06-03</td>
+                    <td>2025-06-04</td>
+                    <td>
+                        <a href="detalle.html" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> Ver detalle
+                        </a>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Editar
+                        </a>
+                        <a href="eliminar.html" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#1003</td>
+                    <td>Carlos Ruiz</td>
+                    <td>VERANO5</td>
+                    <td><span class="badge bg-danger">Cancelado</span></td>
+                    <td>₡22,300.00</td>
+                    <td>Analgésicos varios</td>
+                    <td>2025-06-05</td>
+                    <td>2025-06-05</td>
+                    <td>
+                        <a href="detalle.html" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> Ver detalle
+                        </a>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Editar
+                        </a>
+                        <a href="eliminar.html" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4">
+        <div class="container py-2">
+            &copy; 2025 - Farmacia
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("buscador").addEventListener("keyup", function () {
+            let filtro = this.value.toLowerCase();
+            let filas = document.querySelectorAll("#tablaPedidos tbody tr");
+            filas.forEach(fila => {
+                let texto = fila.textContent.toLowerCase();
+                fila.style.display = texto.includes(filtro) ? "" : "none";
+            });
+        });
+    </script>
+
+</body>
+</html>
