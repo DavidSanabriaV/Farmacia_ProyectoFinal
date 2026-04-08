@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Chatbot - Farmacia</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-4">
+
+<h2 class="mb-4">💬 Chatbot - Farmacia</h2>
+
+<div class="card shadow" style="max-width:480px; margin:0 auto;">
+
+<div class="card-header bg-primary text-white d-flex align-items-center gap-2">
+<i class="bi bi-robot fs-4"></i>
+<div>
+<div class="fw-bold">FarmaBot</div>
+<small>Asistente virtual · En línea</small>
+</div>
+</div>
+
+<div class="card-body bg-light" id="chatBody" style="height:400px; overflow-y:auto; display:flex; flex-direction:column; gap:10px;">
+
+<div class="bg-white border rounded p-3" style="max-width:85%; font-size:14px;">
+👋 ¡Hola! Soy <strong>FarmaBot</strong>. ¿En qué puedo ayudarte hoy?
+<div class="d-flex flex-column gap-2 mt-2" id="menuOpciones">
+<button class="btn btn-outline-primary btn-sm rounded-pill text-start" onclick="seleccionar('📦 Estado de mis pedidos')">📦 Estado de mis pedidos</button>
+<button class="btn btn-outline-primary btn-sm rounded-pill text-start" onclick="seleccionar('💊 Mis medicamentos')">💊 Mis medicamentos</button>
+<button class="btn btn-outline-primary btn-sm rounded-pill text-start" onclick="seleccionar('🕐 Horarios de la farmacia')">🕐 Horarios de la farmacia</button>
+<button class="btn btn-outline-primary btn-sm rounded-pill text-start" onclick="seleccionar('📞 Contactar a un farmacéutico')">📞 Contactar a un farmacéutico</button>
+<button class="btn btn-outline-primary btn-sm rounded-pill text-start" onclick="seleccionar('❓ Preguntas frecuentes')">❓ Preguntas frecuentes</button>
+</div>
+</div>
+
+</div>
+
+<div class="card-footer bg-white d-flex gap-2">
+<input type="text" id="inputMsg" class="form-control form-control-sm" placeholder="Escribe tu mensaje..." onkeydown="if(event.key==='Enter') enviarMensaje()">
+<button class="btn btn-primary btn-sm" onclick="enviarMensaje()">
+<i class="bi bi-send"></i>
+</button>
+</div>
+
+</div>
+
+</div>
+
+<script>
+const respuestas = {
+  '📦 Estado de mis pedidos': '📦 Puedes consultar el estado de tus pedidos en la sección <strong>Mis Pedidos</strong>.',
+  '💊 Mis medicamentos': '💊 Tus medicamentos activos están en la sección <strong>Mis Tratamientos</strong>.',
+  '🕐 Horarios de la farmacia': '🕐 Nuestros horarios son:<br><strong>Lunes a Viernes:</strong> 8:00am - 6:00pm<br><strong>Sábado:</strong> 8:00am - 12:00pm',
+  '📞 Contactar a un farmacéutico': '📞 Puedes llamarnos al <strong>2222-3333</strong> o escribirnos por WhatsApp al <strong>8888-9999</strong>.',
+  '❓ Preguntas frecuentes': '❓ Puedes escribir tu pregunta y con gusto te ayudamos. También puedes consultar nuestra sección de <strong>Ayuda</strong>.'
+};
+
+function agregarMensaje(texto, tipo) {
+  const chat = document.getElementById('chatBody');
+  const div = document.createElement('div');
+  div.innerHTML = texto;
+  div.style.fontSize = '14px';
+  div.style.maxWidth = '85%';
+  div.style.padding = '10px 14px';
+  div.style.borderRadius = '12px';
+
+  if (tipo === 'usuario') {
+    div.style.background = '#0d6efd';
+    div.style.color = 'white';
+    div.style.alignSelf = 'flex-end';
+    div.style.borderRadius = '12px 0 12px 12px';
+  } else {
+    div.style.background = 'white';
+    div.style.border = '1px solid #dee2e6';
+    div.style.borderRadius = '0 12px 12px 12px';
+  }
+
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function seleccionar(opcion) {
+  document.getElementById('menuOpciones').style.display = 'none';
+  agregarMensaje(opcion, 'usuario');
+
+  setTimeout(() => {
+    const respuesta = respuestas[opcion] || 'No tengo información sobre eso en este momento.';
+    agregarMensaje(respuesta, 'bot');
+
+    setTimeout(() => {
+      agregarMensaje('¿Puedo ayudarte con algo más?<br><button class="btn btn-outline-primary btn-sm rounded-pill mt-2" onclick="mostrarMenu()">🏠 Volver al menú</button>', 'bot');
+    }, 600);
+  }, 500);
+}
+
+function mostrarMenu() {
+  const chat = document.getElementById('chatBody');
+  const div = document.createElement('div');
+  div.style.fontSize = '14px';
+  div.style.maxWidth = '85%';
+  div.style.padding = '10px 14px';
+  div.style.background = 'white';
+  div.style.border = '1px solid #dee2e6';
+  div.style.borderRadius = '0 12px 12px 12px';
+  div.innerHTML = '¿En qué más puedo ayudarte?<div class="d-flex flex-column gap-2 mt-2">' +
+    Object.keys(respuestas).map(op =>
+      `<button class="btn btn-outline-primary btn-sm rounded-pill text-start" onclick="seleccionar('${op}')">${op}</button>`
+    ).join('') +
+  '</div>';
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function enviarMensaje() {
+  const input = document.getElementById('inputMsg');
+  const texto = input.value.trim();
+  if (!texto) return;
+
+  agregarMensaje(texto, 'usuario');
+  input.value = '';
+
+  setTimeout(() => {
+    agregarMensaje('Gracias por tu mensaje. Un farmacéutico te atenderá pronto. ¿Puedo ayudarte con algo más?<br><button class="btn btn-outline-primary btn-sm rounded-pill mt-2" onclick="mostrarMenu()">🏠 Volver al menú</button>', 'bot');
+  }, 500);
+}
+</script>
+
+</body>
+</html>
