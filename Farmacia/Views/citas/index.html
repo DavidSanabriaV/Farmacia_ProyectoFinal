@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Citas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container-fluid px-4 mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+            <div>
+                <h2 class="mb-1"><i class="bi bi-calendar3"></i> Control de Citas</h2>
+                <a href="crear-admin.html" class="btn btn-success btn-sm mt-1">
+                    <i class="bi bi-plus-circle"></i> Nueva Cita (Admin)
+                </a>
+            </div>
+
+            <div class="text-end">
+                <span class="d-block text-muted mb-2 small fw-bold text-uppercase">Área del Cliente</span>
+                <a href="agendar.html" class="btn btn-primary me-2">
+                    <i class="bi bi-calendar-event"></i> Pedir Cita
+                </a>
+                <a href="mis-citas.html" class="btn btn-outline-primary">
+                    <i class="bi bi-person-lines-fill"></i> Mis Citas
+                </a>
+            </div>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <table class="table table-hover align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Servicio</th>
+                            <th>Cliente (ID)</th>
+                            <th>Empleado (ID)</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15/04/2026 10:00</td>
+                            <td>Inyectables</td>
+                            <td>Carlos Pérez (505)</td>
+                            <td>María López (20)</td>
+                            <td><span class="badge bg-info text-dark">Pendiente</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="editar.html" class="btn btn-sm btn-warning" title="Editar"><i class="bi bi-pencil"></i></a>
+                                    <a href="cancelar.html" class="btn btn-sm btn-danger" title="Cancelar"><i class="bi bi-x-circle"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

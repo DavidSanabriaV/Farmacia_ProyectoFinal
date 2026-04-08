@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expedientes - Farmacia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-3">📋 Gestión de Expedientes</h2>
+
+        <a href="crear.html" class="btn btn-success mb-3">
+            <i class="bi bi-plus-circle"></i> Registrar nuevo expediente
+        </a>
+
+        <div class="mb-3">
+            <input type="text" id="buscador" class="form-control" placeholder="Buscar expediente...">
+        </div>
+
+        <table class="table table-striped" id="tablaExpedientes">
+            <thead>
+                <tr>
+                    <th>#ID</th>
+                    <th>Descripción</th>
+                    <th>Cliente</th>
+                    <th>Empleado</th>
+                    <th>Fecha Creación</th>
+                    <th>Fecha Actualización</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="text-muted">1</span></td>
+                    <td>Control de hipertensión</td>
+                    <td>Juan Pérez</td>
+                    <td>Dr. García</td>
+                    <td>2025-01-10</td>
+                    <td>2025-03-05</td>
+                    <td>
+                        <a href="detalle.html" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> Ver detalle
+                        </a>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Editar
+                        </a>
+                        <a href="eliminar.html" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">2</span></td>
+                    <td>Seguimiento de diabetes tipo 2</td>
+                    <td>María López</td>
+                    <td>Dr. Ramírez</td>
+                    <td>2025-02-14</td>
+                    <td>2025-02-28</td>
+                    <td>
+                        <a href="detalle.html" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> Ver detalle
+                        </a>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Editar
+                        </a>
+                        <a href="eliminar.html" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">3</span></td>
+                    <td>Tratamiento de anemia</td>
+                    <td>Carlos Mora</td>
+                    <td>Dr. García</td>
+                    <td>2025-03-01</td>
+                    <td>2025-03-20</td>
+                    <td>
+                        <a href="detalle.html" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> Ver detalle
+                        </a>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Editar
+                        </a>
+                        <a href="eliminar.html" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4">
+        <div class="container py-2">
+            &copy; 2025 - Farmacia
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("buscador").addEventListener("keyup", function () {
+            let filtro = this.value.toLowerCase();
+            let filas = document.querySelectorAll("#tablaExpedientes tbody tr");
+            filas.forEach(fila => {
+                let texto = fila.textContent.toLowerCase();
+                fila.style.display = texto.includes(filtro) ? "" : "none";
+            });
+        });
+    </script>
+</body>
+</html>

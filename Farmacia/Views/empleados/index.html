@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empleados - Farmacia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="mb-3">👤 Gestión de Empleados</h2>
+
+        <a href="crear.html" class="btn btn-success mb-3">
+            <i class="bi bi-plus-circle"></i> Registrar nuevo empleado
+        </a>
+
+        <div class="mb-3">
+            <input type="text" id="buscador" class="form-control" placeholder="Buscar empleado...">
+        </div>
+
+        <table class="table table-striped" id="tablaEmpleados">
+            <thead>
+                <tr>
+                    <th>#ID</th>
+                    <th>Cédula</th>
+                    <th>Puesto</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Usuario</th>
+                    <th>Estado</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="text-muted">1</span></td>
+                    <td>1-1234-5678</td>
+                    <td>Farmacéutico</td>
+                    <td>8888-1111</td>
+                    <td>San José, Costa Rica</td>
+                    <td>admin@farmacia.com</td>
+                    <td><span class="badge bg-success">Activo</span></td>
+                    <td>
+                        <a href="detalle.html" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> Ver detalle
+                        </a>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Editar
+                        </a>
+                        <a href="eliminar.html" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">2</span></td>
+                    <td>2-9876-5432</td>
+                    <td>Cajero</td>
+                    <td>7777-2222</td>
+                    <td>Heredia, Costa Rica</td>
+                    <td>cajero@farmacia.com</td>
+                    <td><span class="badge bg-success">Activo</span></td>
+                    <td>
+                        <a href="detalle.html" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> Ver detalle
+                        </a>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Editar
+                        </a>
+                        <a href="eliminar.html" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="text-muted">3</span></td>
+                    <td>3-5555-4444</td>
+                    <td>Bodeguero</td>
+                    <td>6666-3333</td>
+                    <td>Alajuela, Costa Rica</td>
+                    <td>bodega@farmacia.com</td>
+                    <td><span class="badge bg-danger">Inactivo</span></td>
+                    <td>
+                        <a href="detalle.html" class="btn btn-primary btn-sm">
+                            <i class="bi bi-eye"></i> Ver detalle
+                        </a>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Editar
+                        </a>
+                        <a href="eliminar.html" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Eliminar
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="border-top footer text-muted mt-4">
+        <div class="container py-2">
+            &copy; 2025 - Farmacia
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("buscador").addEventListener("keyup", function () {
+            let filtro = this.value.toLowerCase();
+            let filas = document.querySelectorAll("#tablaEmpleados tbody tr");
+            filas.forEach(fila => {
+                let texto = fila.textContent.toLowerCase();
+                fila.style.display = texto.includes(filtro) ? "" : "none";
+            });
+        });
+    </script>
+
+</body>
+</html>
