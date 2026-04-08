@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Actualizar Stock</title>
+<title>Eliminar Inventario</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -12,49 +12,30 @@
 
 <div class="container">
 
-<h2 class="mb-3">Actualizar Stock</h2>
+<h2 class="mb-3">Eliminar Producto del Inventario</h2>
 
-<form class="row g-3" action="index.html">
+<div class="card border-danger shadow" style="max-width:600px">
 
-<div class="col-md-6">
-<label class="form-label">Producto</label>
-<input type="text" class="form-control" value="Amoxicilina 500mg" readonly>
-</div>
+<div class="card-body">
 
-<div class="col-md-6">
-<label class="form-label">Número de Lote</label>
-<input type="text" class="form-control" value="L001">
-</div>
+<h5 class="text-danger">
+¿Está seguro de eliminar este producto del inventario?
+</h5>
 
-<div class="col-md-6">
-<label class="form-label">Cantidad Disponible</label>
-<input type="number" class="form-control" value="120">
-</div>
+<hr>
 
-<div class="col-md-6">
-<label class="form-label">Cantidad Mínima</label>
-<input type="number" class="form-control" value="20">
-</div>
+<p>
 
-<div class="col-md-6">
-<label class="form-label">Fecha Vencimiento</label>
-<input type="date" class="form-control" value="2026-01-10">
-</div>
+<strong>Producto:</strong> Amoxicilina 500mg <br>
+<strong>Lote:</strong> L001 <br>
+<strong>Cantidad:</strong> 120 <br>
+<strong>Fecha Vencimiento:</strong> 2026-01-10
 
-<div class="col-md-6">
-<label class="form-label">Estado</label>
-<select class="form-select">
-<option selected>Disponible</option>
-<option>Agotado</option>
-<option>Vencido</option>
-</select>
-</div>
+</p>
 
-<div class="col-12">
-
-<button class="btn btn-primary">
-<i class="bi bi-save"></i> Guardar cambios
-</button>
+<a href="index.html" class="btn btn-danger">
+Eliminar
+</a>
 
 <a href="index.html" class="btn btn-secondary">
 Cancelar
@@ -62,7 +43,7 @@ Cancelar
 
 </div>
 
-</form>
+</div>
 
 </div>
 

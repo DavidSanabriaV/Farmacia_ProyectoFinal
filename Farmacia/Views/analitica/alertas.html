@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Alertas del Sistema</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container mt-4">
+
+<h2 class="mb-4">🔔 Alertas del Sistema</h2>
+
+<!-- Alerta bajo stock -->
+<div class="alert alert-warning d-flex align-items-center">
+<i class="bi bi-exclamation-triangle me-2"></i>
+<div>
+<strong>Bajo stock:</strong> El producto <b>Paracetamol 500mg</b> tiene solo <b>5 unidades</b> disponibles.
+</div>
+</div>
+
+<!-- Alerta sin stock -->
+<div class="alert alert-danger d-flex align-items-center">
+<i class="bi bi-x-circle me-2"></i>
+<div>
+<strong>Sin stock:</strong> El producto <b>Ibuprofeno 400mg</b> está agotado.
+</div>
+</div>
+
+<!-- Alerta producto por vencer -->
+<div class="alert alert-info d-flex align-items-center">
+<i class="bi bi-clock me-2"></i>
+<div>
+<strong>Próximo a vencer:</strong> El producto <b>Amoxicilina 500mg</b> vence en <b>20 días</b>.
+</div>
+</div>
+
+<hr>
+
+<h4 class="mt-4">Resumen de alertas</h4>
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Producto</th>
+<th>Tipo de alerta</th>
+<th>Detalle</th>
+<th>Prioridad</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Paracetamol 500mg</td>
+<td>Bajo stock</td>
+<td>5 unidades disponibles</td>
+<td><span class="badge bg-warning">Media</span></td>
+</tr>
+
+<tr>
+<td>Ibuprofeno 400mg</td>
+<td>Sin stock</td>
+<td>Producto agotado</td>
+<td><span class="badge bg-danger">Alta</span></td>
+</tr>
+
+<tr>
+<td>Amoxicilina 500mg</td>
+<td>Próximo a vencer</td>
+<td>20 días restantes</td>
+<td><span class="badge bg-info">Media</span></td>
+</tr>
+
+</tbody>
+</table>
+
+<a href="../inventario/index.html" class="btn btn-secondary mt-3">
+<i class="bi bi-arrow-left"></i> Volver al inventario
+</a>
+
+</div>
+
+</body>
+</html>
