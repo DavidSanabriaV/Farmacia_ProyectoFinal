@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle Expediente - Farmacia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+
+    <div class="container py-4">
+        <h2 class="mb-4"><i class="bi bi-folder2-open"></i> Detalle del Expediente</h2>
+
+        <div class="card shadow" style="max-width: 800px;">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="bi bi-clipboard2-pulse"></i> Expediente #EXP-00142</h5>
+            </div>
+            <div class="card-body">
+
+                <h6 class="text-muted text-uppercase mb-3"><i class="bi bi-info-circle"></i> Información General</h6>
+                <dl class="row">
+                    <dt class="col-sm-4">ID Expediente</dt>
+                    <dd class="col-sm-8">EXP-00142</dd>
+
+                    <dt class="col-sm-4">Descripción</dt>
+                    <dd class="col-sm-8">Paciente con historial de hipertensión arterial y tratamiento continuo con Losartán 50mg. Se registran controles mensuales.</dd>
+
+                    <dt class="col-sm-4">Fecha de Creación</dt>
+                    <dd class="col-sm-8"><i class="bi bi-calendar-plus text-success"></i> 12/01/2024</dd>
+
+                    <dt class="col-sm-4">Última Actualización</dt>
+                    <dd class="col-sm-8"><i class="bi bi-calendar-check text-warning"></i> 03/04/2025</dd>
+                </dl>
+
+                <hr />
+
+                <h6 class="text-muted text-uppercase mb-3"><i class="bi bi-person"></i> Cliente Asociado</h6>
+                <dl class="row">
+                    <dt class="col-sm-4">Nombre</dt>
+                    <dd class="col-sm-8">Juan Carlos Méndez Solano</dd>
+
+                    <dt class="col-sm-4">Cédula</dt>
+                    <dd class="col-sm-8">1-0987-0654</dd>
+
+                    <dt class="col-sm-4">Teléfono</dt>
+                    <dd class="col-sm-8">8841-2233</dd>
+                </dl>
+
+                <hr />
+
+                <h6 class="text-muted text-uppercase mb-3"><i class="bi bi-person-badge"></i> Empleado Responsable</h6>
+                <dl class="row">
+                    <dt class="col-sm-4">Nombre</dt>
+                    <dd class="col-sm-8">Dra. Lucía Vargas Mora</dd>
+
+                    <dt class="col-sm-4">Puesto</dt>
+                    <dd class="col-sm-8">Farmacéutica</dd>
+                </dl>
+
+                <hr />
+
+                <h6 class="text-muted text-uppercase mb-3"><i class="bi bi-file-earmark-medical"></i> Recetas Médicas</h6>
+                <table class="table table-sm table-bordered table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>#</th>
+                            <th>Descripción</th>
+                            <th>Frecuencia</th>
+                            <th>Producto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>REC-001</td>
+                            <td>Control de presión arterial</td>
+                            <td>Cada 12 horas</td>
+                            <td>Losartán 50mg</td>
+                        </tr>
+                        <tr>
+                            <td>REC-002</td>
+                            <td>Suplemento vitamínico</td>
+                            <td>Una vez al día</td>
+                            <td>Vitamina D3</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr />
+
+               
+                <div class="d-flex gap-2 flex-wrap">
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Volver al listado
+                    </a>
+                    <a href="editar.html" class="btn btn-warning">
+                        <i class="bi bi-pencil"></i> Editar
+                    </a>
+                    <a href="eliminar.html" class="btn btn-danger">
+                        <i class="bi bi-trash"></i> Eliminar
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-top text-muted mt-4">
+        <div class="container py-2">
+            &copy; 2025 - Farmacia
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
