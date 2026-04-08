@@ -3,43 +3,38 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos - Farmacia</title>
+    <title>Categorías - Farmacia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
 <body>
 
     <div class="container">
-        <h2 class="mb-3">📦 Gestión de Productos</h2>
+        <h2 class="mb-3">🗂️ Gestión de Categorías</h2>
 
         <a href="crear.html" class="btn btn-success mb-3">
-            <i class="bi bi-plus-circle"></i> Registrar nuevo producto
+            <i class="bi bi-plus-circle"></i> Registrar nueva categoría
         </a>
 
-        <!-- 🔍 Barra de búsqueda -->
         <div class="mb-3">
-            <input type="text" id="buscador" class="form-control" placeholder="Buscar producto...">
+            <input type="text" id="buscador" class="form-control" placeholder="Buscar categoría...">
         </div>
 
-        <table class="table table-striped" id="tablaProductos">
+        <table class="table table-striped" id="tablaCategorias">
             <thead>
                 <tr>
+                    <th>#ID</th>
                     <th>Nombre</th>
-                    <th>Categoría</th>
-                    <th>Precio</th>
-                    <th>Marca</th>
-                    <th>Receta</th>
+                    <th>Descripción</th>
                     <th>Estado</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Amoxicilina 500mg</td>
+                    <td><span class="text-muted">1</span></td>
                     <td>Antibióticos</td>
-                    <td>₡2,500.00</td>
-                    <td>Genérico</td>
-                    <td><span class="badge bg-warning">Sí</span></td>
+                    <td>Medicamentos para combatir infecciones bacterianas.</td>
                     <td><span class="badge bg-success">Activo</span></td>
                     <td>
                         <a href="detalle.html" class="btn btn-primary btn-sm">
@@ -54,11 +49,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Ibuprofeno 400mg</td>
+                    <td><span class="text-muted">2</span></td>
                     <td>Analgésicos</td>
-                    <td>₡1,200.00</td>
-                    <td>Bayer</td>
-                    <td><span class="badge bg-secondary">No</span></td>
+                    <td>Medicamentos para el alivio del dolor.</td>
                     <td><span class="badge bg-success">Activo</span></td>
                     <td>
                         <a href="detalle.html" class="btn btn-primary btn-sm">
@@ -73,11 +66,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Metformina 850mg</td>
+                    <td><span class="text-muted">3</span></td>
                     <td>Antidiabéticos</td>
-                    <td>₡3,800.00</td>
-                    <td>Genérico</td>
-                    <td><span class="badge bg-warning">Sí</span></td>
+                    <td>Medicamentos para el control de la diabetes.</td>
                     <td><span class="badge bg-danger">Inactivo</span></td>
                     <td>
                         <a href="detalle.html" class="btn btn-primary btn-sm">
@@ -102,13 +93,10 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- 🔍 Script de búsqueda -->
     <script>
         document.getElementById("buscador").addEventListener("keyup", function () {
             let filtro = this.value.toLowerCase();
-            let filas = document.querySelectorAll("#tablaProductos tbody tr");
-
+            let filas = document.querySelectorAll("#tablaCategorias tbody tr");
             filas.forEach(fila => {
                 let texto = fila.textContent.toLowerCase();
                 fila.style.display = texto.includes(filtro) ? "" : "none";
