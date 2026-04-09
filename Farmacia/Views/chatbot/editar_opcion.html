@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<title>Editar Opción - Chatbot</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Editar Opción - Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
+    <div id="navbar-placeholder"></div>
 
-<div class="container mt-4">
+    <div class="container mt-4">
 
-<h2 class="mb-4">✏️ Editar Opción del Menú</h2>
+        <h2 class="mb-4">✏️ Editar Opción del Menú</h2>
 
-<form class="row g-3" action="configuracion.html">
+        <form class="row g-3" action="configuracion.html">
 
-<div class="col-md-6">
-<label class="form-label">Icono / Emoji</label>
-<input type="text" class="form-control" value="📦">
-</div>
+            <div class="col-md-6">
+                <label class="form-label">Icono / Emoji</label>
+                <input type="text" class="form-control" value="📦">
+            </div>
 
-<div class="col-md-6">
-<label class="form-label">Nombre de la opción *</label>
-<input type="text" class="form-control" value="Estado de mis pedidos">
-</div>
+            <div class="col-md-6">
+                <label class="form-label">Nombre de la opción *</label>
+                <input type="text" class="form-control" value="Estado de mis pedidos">
+            </div>
 
-<div class="col-12">
-<label class="form-label">Respuesta configurada *</label>
-<textarea class="form-control" rows="3">Redirige a la sección Mis Pedidos</textarea>
-</div>
+            <div class="col-12">
+                <label class="form-label">Respuesta configurada *</label>
+                <textarea class="form-control" rows="3">Redirige a la sección Mis Pedidos</textarea>
+            </div>
 
-<div class="col-md-6">
-<label class="form-label">Estado *</label>
-<select class="form-select">
-<option selected>Activo</option>
-<option>Inactivo</option>
-</select>
-</div>
+            <div class="col-md-6">
+                <label class="form-label">Estado *</label>
+                <select class="form-select">
+                    <option selected>Activo</option>
+                    <option>Inactivo</option>
+                </select>
+            </div>
 
-<div class="col-12">
-<button type="submit" class="btn btn-primary">
-<i class="bi bi-save"></i> Guardar cambios
-</button>
-<a href="configuracion.html" class="btn btn-secondary">
-Cancelar
-</a>
-</div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-save"></i> Guardar cambios
+                </button>
+                <a href="configuracion.html" class="btn btn-secondary">
+                    Cancelar
+                </a>
+            </div>
 
-</form>
+        </form>
 
-</div>
-
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src="../components/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

@@ -1,91 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<title>Mis Tratamientos</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Mis Tratamientos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
+    <div id="navbar-placeholder"></div>
 
-<div class="container mt-4">
+    <div class="container mt-4">
 
-<h2 class="mb-4">💊 Mis Tratamientos y Recordatorios</h2>
+        <h2 class="mb-4">💊 Mis Tratamientos y Recordatorios</h2>
 
-<a href="registrar.html" class="btn btn-success mb-3">
-<i class="bi bi-plus-circle"></i> Registrar nuevo tratamiento
-</a>
+        <a href="registrar.html" class="btn btn-success mb-3">
+            <i class="bi bi-plus-circle"></i> Registrar nuevo tratamiento
+        </a>
 
 
-<div class="alert alert-info d-flex align-items-center mb-4">
-<i class="bi bi-bell-fill me-2 fs-5"></i>
-<div>
-<strong>Recordatorio:</strong> Es hora de tomar <b>Amoxicilina 500mg</b> — 1 tableta. (08:00 AM)
-</div>
-</div>
+        <div class="alert alert-info d-flex align-items-center mb-4">
+            <i class="bi bi-bell-fill me-2 fs-5"></i>
+            <div>
+                <strong>Recordatorio:</strong> Es hora de tomar <b>Amoxicilina 500mg</b> — 1 tableta. (08:00 AM)
+            </div>
+        </div>
 
-<table class="table table-striped">
-<thead>
-<tr>
-<th>Medicamento</th>
-<th>Dosis</th>
-<th>Frecuencia</th>
-<th>Horarios</th>
-<th>Fecha fin</th>
-<th>Estado</th>
-<th></th>
-</tr>
-</thead>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Medicamento</th>
+                    <th>Dosis</th>
+                    <th>Frecuencia</th>
+                    <th>Horarios</th>
+                    <th>Fecha fin</th>
+                    <th>Estado</th>
+                    <th></th>
+                </tr>
+            </thead>
 
-<tbody>
+            <tbody>
 
-<tr>
-<td>Amoxicilina 500mg</td>
-<td>1 tableta</td>
-<td>Cada 12 horas</td>
-<td>08:00 / 20:00</td>
-<td>2025-04-15</td>
-<td><span class="badge bg-success">Activo</span></td>
-<td>
-<a href="editar.html" class="btn btn-warning btn-sm">
-<i class="bi bi-pencil"></i>
-</a>
-</td>
-</tr>
+                <tr>
+                    <td>Amoxicilina 500mg</td>
+                    <td>1 tableta</td>
+                    <td>Cada 12 horas</td>
+                    <td>08:00 / 20:00</td>
+                    <td>2025-04-15</td>
+                    <td><span class="badge bg-success">Activo</span></td>
+                    <td>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                    </td>
+                </tr>
 
-<tr>
-<td>Metformina 850mg</td>
-<td>1 tableta</td>
-<td>Una vez al día</td>
-<td>07:00</td>
-<td>2025-06-01</td>
-<td><span class="badge bg-success">Activo</span></td>
-<td>
-<a href="editar.html" class="btn btn-warning btn-sm">
-<i class="bi bi-pencil"></i>
-</a>
-</td>
-</tr>
+                <tr>
+                    <td>Metformina 850mg</td>
+                    <td>1 tableta</td>
+                    <td>Una vez al día</td>
+                    <td>07:00</td>
+                    <td>2025-06-01</td>
+                    <td><span class="badge bg-success">Activo</span></td>
+                    <td>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                    </td>
+                </tr>
 
-<tr>
-<td>Ibuprofeno 400mg</td>
-<td>1 tableta</td>
-<td>Cada 8 horas</td>
-<td>07:00 / 15:00 / 23:00</td>
-<td>2025-04-05</td>
-<td><span class="badge bg-secondary">Finalizado</span></td>
-<td>
-<a href="editar.html" class="btn btn-warning btn-sm">
-<i class="bi bi-pencil"></i>
-</a>
-</td>
-</tr>
+                <tr>
+                    <td>Ibuprofeno 400mg</td>
+                    <td>1 tableta</td>
+                    <td>Cada 8 horas</td>
+                    <td>07:00 / 15:00 / 23:00</td>
+                    <td>2025-04-05</td>
+                    <td><span class="badge bg-secondary">Finalizado</span></td>
+                    <td>
+                        <a href="editar.html" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                    </td>
+                </tr>
 
-</tbody>
-</table>
+            </tbody>
+        </table>
 
-</div>
+    </div>
+    <div id="footer-placeholder"></div>
 
+    <script src="../components/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
