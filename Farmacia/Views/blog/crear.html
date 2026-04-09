@@ -1,57 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Publicar Noticia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Noticia - Farmacia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body class="bg-light">
 
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card shadow border-0">
-                    <div class="card-header bg-dark text-white py-3">
-                        <h4 class="mb-0"><i class="bi bi-pencil-square"></i> Datos de la Noticia</h4>
-                    </div>
-                    <div class="card-body p-4">
-                        <form action="blog.html">
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">Título</label>
-                                <input type="text" class="form-control" placeholder="Título de la noticia" required>
-                            </div>
+<body class="bg-light d-flex flex-column min-vh-100">
 
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold">Categoría</label>
-                                    <select class="form-select">
-                                        <option>Nutrición</option>
-                                        <option>Prevención</option>
-                                        <option>Salud Mental</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold">Enlace de Imagen (URL)</label>
-                                    <input type="text" class="form-control" placeholder="https://ejemplo.com/foto.jpg">
-                                </div>
-                            </div>
+    <div id="navbar-placeholder"></div>
 
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">Contenido del Artículo</label>
-                                <textarea class="form-control" rows="8" placeholder="Escribe aquí el contenido..."></textarea>
-                            </div>
+    <main class="py-5">
+        <div class="container">
 
-                            <div class="d-flex justify-content-end gap-2 border-top pt-3">
-                                <a href="blog.html" class="btn btn-secondary">Cancelar</a>
-                                <button type="submit" class="btn btn-success px-4">Publicar Noticia</button>
-                            </div>
-                        </form>
-                    </div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="mb-0">Publicar Noticia</h2>
+                    <p class="text-muted mb-0">Agregá un nuevo artículo al blog</p>
                 </div>
+                <a href="blog.html" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Volver al Blog
+                </a>
             </div>
-        </div>
-    </div>
 
+            <form action="blog.html" class="row g-3">
+
+                <div class="col-md-12">
+                    <label class="form-label">Título *</label>
+                    <input type="text" class="form-control" placeholder="Título del artículo" required />
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Categoría *</label>
+                    <select class="form-select">
+                        <option value="">Seleccione una categoría</option>
+                        <option>Nutrición</option>
+                        <option>Prevención</option>
+                        <option>Salud Mental</option>
+                        <option>Bienestar</option>
+                        <option>Medicamentos</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">URL de Imagen</label>
+                    <input type="text" class="form-control" placeholder="https://ejemplo.com/foto.jpg" />
+                </div>
+
+                <div class="col-md-12">
+                    <label class="form-label">Contenido del Artículo *</label>
+                    <textarea class="form-control" rows="10" placeholder="Escribí aquí el contenido..."></textarea>
+                </div>
+
+                <div class="col-12 d-flex gap-2 justify-content-end border-top pt-3">
+                    <a href="blog.html" class="btn btn-secondary">
+                        <i class="bi bi-x-circle"></i> Cancelar
+                    </a>
+                    <button type="submit" class="btn btn-success px-4">
+                        <i class="bi bi-send"></i> Publicar Noticia
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../components/loader.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,22 +8,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
+
 <body>
+    <div id="navbar-placeholder"></div>
 
     <div class="container">
         <h2 class="mb-3">🧾 Gestión de Facturas</h2>
 
-        <!-- Botón de historial -->
         <a href="historial.html" class="btn btn-info mb-3">
             <i class="bi bi-clock-history"></i> Ver historial de mis facturas
         </a>
 
-        <!-- Barra de búsqueda -->
         <div class="mb-3">
             <input type="text" id="buscador" class="form-control" placeholder="Buscar factura...">
         </div>
 
-        <!-- Tabla de facturas -->
         <table class="table table-striped" id="tablaFacturas">
             <thead>
                 <tr>
@@ -75,26 +75,19 @@
         </table>
     </div>
 
-    <!-- Footer -->
-    <footer class="border-top footer text-muted mt-4">
-        <div class="container py-2">
-            &copy; 2025 - Farmacia
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../components/loader.js"></script>
 
-    <!-- Script de búsqueda -->
     <script>
         document.getElementById("buscador").addEventListener("keyup", function () {
             let filtro = this.value.toLowerCase();
-            let filas = document.querySelectorAll("#tablaFacturas tbody tr");
-            filas.forEach(fila => {
-                let texto = fila.textContent.toLowerCase();
-                fila.style.display = texto.includes(filtro) ? "" : "none";
+            document.querySelectorAll("#tablaFacturas tbody tr").forEach(fila => {
+                fila.style.display = fila.textContent.toLowerCase().includes(filtro) ? "" : "none";
             });
         });
     </script>
-
 </body>
+
 </html>

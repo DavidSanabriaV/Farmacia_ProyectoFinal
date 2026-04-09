@@ -1,72 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Editar Noticia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Noticia - Farmacia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body class="bg-light">
 
-    <div class="container mt-5 pb-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <a href="blog.html" class="btn btn-link text-decoration-none p-0 text-secondary">
-                        <i class="bi bi-arrow-left"></i> Volver al blog
-                    </a>
-                    <span class="badge bg-warning text-dark">Modo Edición</span>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="py-5">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="mb-0">Editar Noticia</h2>
+                    <p class="text-muted mb-0">Modificá el contenido del artículo</p>
                 </div>
-
-                <div class="card shadow border-0">
-                    <div class="card-header bg-warning text-dark py-3 d-flex justify-content-between align-items-center">
-                        <h4 class="mb-0 fw-bold"><i class="bi bi-pencil-fill"></i> Editar Noticia #782</h4>
-                        <button class="btn btn-sm btn-outline-danger border-0" title="Eliminar noticia">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </div>
-                    
-                    <div class="card-body p-4">
-                        <form action="blog.html">
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">Título del Artículo</label>
-                                <input type="text" class="form-control" value="5 Consejos para una dieta balanceada" required>
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold">Categoría</label>
-                                    <select class="form-select">
-                                        <option selected>Nutrición</option>
-                                        <option>Prevención</option>
-                                        <option>Salud Mental</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-bold">URL de la Imagen</label>
-                                    <input type="text" class="form-control" value="https://images.unsplash.com/photo-1505751172107-573967a4f39a">
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label class="form-label fw-bold">Contenido</label>
-                                <textarea class="form-control" rows="10">Aprende a combinar tus alimentos para mejorar tu energía diaria. Mantener una alimentación equilibrada no se trata de restricciones, sino de encontrar la armonía entre los nutrientes que tu cuerpo realmente necesita para rendir al máximo...</textarea>
-                            </div>
-
-                            <div class="alert alert-secondary small">
-                                <i class="bi bi-info-circle"></i> Última modificación: <b>07/04/2026</b> por <b>Admin_Farmacia</b>
-                            </div>
-
-                            <div class="d-flex justify-content-end gap-2 border-top pt-3 mt-4">
-                                <a href="blog.html" class="btn btn-outline-secondary px-4">Descartar Cambios</a>
-                                <button type="submit" class="btn btn-warning px-5 fw-bold">Actualizar Contenido</button>
-                            </div>
-                        </form>
-                    </div>
+                <div class="d-flex gap-2">
+                    <a href="blog.html" class="btn btn-secondary">
+                        <i class="bi bi-arrow-left"></i> Volver al Blog
+                    </a>
+                    <a href="eliminar.html" class="btn btn-danger">
+                        <i class="bi bi-trash"></i> Eliminar
+                    </a>
                 </div>
             </div>
-        </div>
-    </div>
 
+            <form action="blog.html" class="row g-3">
+
+                <div class="col-md-12">
+                    <label class="form-label">Título *</label>
+                    <input type="text" class="form-control" value="5 Consejos para una dieta balanceada" required />
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Categoría *</label>
+                    <select class="form-select">
+                        <option selected>Nutrición</option>
+                        <option>Prevención</option>
+                        <option>Salud Mental</option>
+                        <option>Bienestar</option>
+                        <option>Medicamentos</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">URL de Imagen</label>
+                    <input type="text" class="form-control"
+                        value="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" />
+                </div>
+
+                <div class="col-md-12">
+                    <label class="form-label">Contenido del Artículo *</label>
+                    <textarea class="form-control"
+                        rows="10">Aprende a combinar tus alimentos para mejorar tu energía diaria. Mantener una alimentación equilibrada no se trata de restricciones, sino de encontrar la armonía entre los nutrientes que tu cuerpo realmente necesita para rendir al máximo...</textarea>
+                </div>
+
+                <div class="col-12">
+                    <div class="alert alert-info">
+                        <i class="bi bi-info-circle me-1"></i>
+                        Última modificación: <strong>07/04/2026</strong> por <strong>Admin_Farmacia</strong>
+                    </div>
+                </div>
+
+                <div class="col-12 d-flex gap-2 justify-content-end border-top pt-3">
+                    <a href="blog.html" class="btn btn-secondary">
+                        <i class="bi bi-x-circle"></i> Descartar cambios
+                    </a>
+                    <button type="submit" class="btn btn-warning px-4">
+                        <i class="bi bi-save"></i> Actualizar Contenido
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../components/loader.js"></script>
 </body>
+
 </html>
